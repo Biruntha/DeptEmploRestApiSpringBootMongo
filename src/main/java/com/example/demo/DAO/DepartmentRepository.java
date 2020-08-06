@@ -18,6 +18,6 @@ public interface DepartmentRepository extends MongoRepository<Department, String
 	@Query(value = "{'employees.name' : ?0}", fields = "{'employees' : 0}")
 	Optional<Department> findDepartmentByEmployeeName(String empName);
 	
-	@Query(value = "{'name' : ?0}", fields = "{'employees' : 1}")
-	List<Employee> findEmployeesByName(String name);
+	//@Query(value = "{'name' : ?0}", fields = "{'employees' : 1}")
+	//List<Employee> findEmployeesByName(String name);
 }
